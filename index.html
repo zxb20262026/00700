@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CATL 生态链日监控 · 2026-06-07 · 晚报 🌙</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Microsoft YaHei","PingFang SC",sans-serif;background:#0a0e17;color:#e6edf3;line-height:1.5;padding:16px;min-height:100vh}
+.wrap{max-width:900px;margin:0 auto}
+
+/* ── 头部 ── */
+.header{background:linear-gradient(135deg,#0a1628 0%,#0f3460 40%,#16213e 70%,#0a0e17 100%);border:1px solid #1e3a5f;border-radius:16px;padding:28px 20px 20px;margin-bottom:16px;text-align:center;position:relative;overflow:hidden}
+.header::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 30% 30%,rgba(63,185,80,0.08) 0%,transparent 50%),radial-gradient(circle at 70% 70%,rgba(88,166,255,0.06) 0%,transparent 50%);animation:pulse 4s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:0.6}50%{opacity:1}}
+.header h1{font-size:1.6em;font-weight:700;position:relative;z-index:1;letter-spacing:1px}
+.header .sub{color:#8b949e;font-size:0.85em;margin-top:6px;position:relative;z-index:1}
+.header .badge{display:inline-block;padding:3px 12px;border-radius:12px;font-size:0.75em;font-weight:600;margin-top:8px;position:relative;z-index:1}
+.badge-morning{background:rgba(88,166,255,0.15);color:#58a6ff}
+
+/* ── 快捷导航 ── */
+.nav-bar{display:flex;justify-content:center;gap:8px;margin-bottom:12px;flex-wrap:wrap;position:relative;z-index:2}
+.nav-btn{font-size:0.72em;padding:5px 14px;border-radius:16px;background:#131a26;border:1px solid #1e2d45;color:#8b949e;text-decoration:none;transition:all .2s;display:inline-block}
+.nav-btn:hover{border-color:#58a6ff;color:#58a6ff}
+.nav-btn.active{border-color:#58a6ff;color:#58a6ff;background:rgba(88,166,255,0.1)}
+.badge-evening{background:rgba(210,153,34,0.15);color:#d29922}
+
+/* ── KPI 网格 ── */
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:10px;margin-bottom:16px}
+.kpi-card{background:#131a26;border:1px solid #1e2d45;border-radius:10px;padding:14px;display:flex;flex-direction:column}
+.kpi-card .kpi-label{color:#8b949e;font-size:0.68em;letter-spacing:0.5px;margin-bottom:4px}
+.kpi-card .kpi-value{font-size:1.5em;font-weight:700;margin-bottom:2px}
+.kpi-card .kpi-change{font-size:0.8em;margin-bottom:6px}
+.kpi-card .kpi-note{font-size:0.7em;color:#6e7681;padding-top:6px;border-top:1px solid #1e2d45;line-height:1.4}
+
+/* ── 核心总结条 ── */
+.core-banner{background:linear-gradient(135deg,rgba(248,81,73,0.08),rgba(210,153,34,0.06));border:1px solid;border-radius:12px;padding:14px 18px;margin-bottom:14px;font-size:0.88em;font-weight:600;line-height:1.6;text-align:center}
+
+/* ── 总结面板 ── */
+.summary-panel{background:#131a26;border:1px solid #1e2d45;border-radius:12px;padding:16px;margin-bottom:14px}
+.summary-panel .sp-title{font-size:0.9em;font-weight:600;color:#e6edf3;margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.summary-section{margin-bottom:10px}
+.summary-section:last-child{margin-bottom:0}
+.summary-section .ss-label{font-size:0.7em;color:#8b949e;margin-bottom:4px;text-transform:uppercase;letter-spacing:1px}
+.summary-item{display:flex;align-items:flex-start;gap:8px;padding:6px 10px;border-radius:6px;margin-bottom:4px;font-size:0.8em;line-height:1.45}
+.summary-item:last-child{margin-bottom:0}
+.summary-item.critical{border-left:3px solid #f85149;background:rgba(248,81,73,0.08)}
+.summary-item.important{border-left:3px solid #d29922;background:rgba(210,153,34,0.06)}
+.summary-item.info{border-left:3px solid #58a6ff;background:rgba(88,166,255,0.05)}
+.summary-item.positive{border-left:3px solid #3fb950;background:rgba(63,185,80,0.05)}
+.summary-item .si-icon{font-size:0.9em;flex-shrink:0;margin-top:1px}
+.summary-item .si-content{flex:1}
+.hl-red{color:#f85149;font-weight:700}
+.hl-yellow{color:#d29922;font-weight:700}
+.hl-green{color:#3fb950;font-weight:700}
+.hl-blue{color:#58a6ff;font-weight:700}
+
+/* ── 操作建议模块 ── */
+.trade-plan{background:#131a26;border:1px solid #1e2d45;border-radius:12px;padding:16px;margin-bottom:14px}
+.trade-plan .tp-title{font-size:0.9em;font-weight:600;color:#d29922;margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.trade-section{margin-bottom:10px}
+.trade-section:last-child{margin-bottom:0}
+.trade-section h3{font-size:0.78em;color:#58a6ff;margin-bottom:4px}
+.trade-section p,.trade-section li{font-size:0.78em;color:#c9d1d9;line-height:1.6}
+.trade-section ul{list-style:none;padding-left:0}
+.trade-section li{padding:2px 0;padding-left:12px;position:relative}
+.trade-section li::before{content:'▸';position:absolute;left:0;color:#484f58;font-size:0.7em}
+
+/* ── 模块卡片 ── */
+.module{background:#131a26;border:1px solid #1e2d45;border-radius:12px;padding:16px;margin-bottom:14px}
+.module-hdr{display:flex;align-items:center;gap:8px;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid #1e2d45}
+.module-hdr .icon{font-size:1.2em}
+.module-hdr h2{font-size:0.95em;font-weight:600;color:#58a6ff;flex:1}
+.module-hdr .status{font-size:0.72em;padding:2px 8px;border-radius:6px}
+
+table{width:100%;border-collapse:collapse;font-size:0.8em}
+th,td{padding:6px 8px;text-align:left;border-bottom:1px solid #1e2d45}
+th{color:#8b949e;font-weight:500;font-size:0.85em}
+tr:hover{background:rgba(88,166,255,0.03)}
+
+.news-list{margin:0;padding:0;list-style:none}
+.news-item{display:flex;gap:8px;padding:7px 0;border-bottom:1px solid #1e2d45;align-items:flex-start}
+.news-item:last-child{border-bottom:none}
+.news-date{color:#484f58;font-size:0.7em;white-space:nowrap;min-width:42px;padding-top:1px}
+.news-info{flex:1;min-width:0}
+.news-info a{color:#e6edf3;text-decoration:none;font-size:0.82em;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}
+.news-info a:hover{color:#58a6ff}
+.news-info .src{color:#484f58;font-size:0.7em;margin-top:2px}
+
+.mat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}
+.mat-card{background:rgba(255,255,255,0.02);border:1px solid #1e2d45;border-radius:8px;padding:10px;text-align:center}
+.mat-card .name{font-size:0.72em;color:#8b949e}
+.mat-card .price{font-size:1.1em;font-weight:700;margin:3px 0}
+.mat-card .trend{font-size:0.7em;padding:1px 6px;border-radius:4px}
+
+.footer{text-align:center;padding:20px 0 40px;color:#484f58;font-size:0.72em;line-height:1.8}
+.footer a{color:#58a6ff;text-decoration:none}
+
+/* ── 估值模块 ── */
+.val-section{margin-bottom:16px}
+.val-section h3{font-size:0.82em;color:#58a6ff;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid #1e2d45}
+.val-table{width:100%;border-collapse:collapse;font-size:0.78em;margin-bottom:12px}
+.val-table th,.val-table td{padding:5px 8px;text-align:center;border-bottom:1px solid #1e2d45}
+.val-table th{color:#8b949e;font-weight:500}
+.val-table td:first-child{text-align:left;font-weight:500}
+.band-bar{height:8px;border-radius:4px;background:#1e2d45;margin:28px 0 10px;position:relative;overflow:visible}
+.band-seg{height:100%;position:absolute;top:0}
+.band-marker{position:absolute;top:-6px;width:14px;height:20px;border-radius:3px;transform:translateX(-50%);z-index:2}
+.band-labels{display:flex;justify-content:space-between;font-size:0.65em;color:#484f58;margin-top:4px}
+.inst-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}
+.inst-card{background:rgba(255,255,255,0.02);border:1px solid #1e2d45;border-radius:8px;padding:12px;text-align:center}
+.inst-card .val{font-size:1.4em;font-weight:700}
+.inst-card .lbl{font-size:0.7em;color:#8b949e;margin-top:2px}
+.inst-card .note{font-size:0.68em;color:#6e7681;margin-top:4px}
+
+@media(max-width:600px){
+  body{padding:10px}
+  .header{padding:20px 14px}
+  .header h1{font-size:1.3em}
+  .kpi-grid{grid-template-columns:repeat(2,1fr)}
+  .mat-grid{grid-template-columns:repeat(2,1fr)}
+  .module{padding:12px}
+}
+
+/* ── 技术面分析模块 ── */
+.tech-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+.tech-card{background:rgba(255,255,255,0.02);border:1px solid #1e2d45;border-radius:8px;padding:12px 10px;text-align:center}
+.tech-card .t-lbl{font-size:0.68em;color:#8b949e;margin-bottom:3px}
+.tech-card .t-val{font-size:1.25em;font-weight:700;margin-bottom:2px}
+.tech-card .t-dev{font-size:0.65em;padding:1px 0;display:block}
+.tech-card .t-status{font-size:0.68em;font-weight:600;margin-top:2px}
+.tech-chart{background:rgba(255,255,255,0.01);border:1px solid #1e2d45;border-radius:8px;padding:10px;margin-bottom:14px;overflow-x:auto}
+.tech-summary{padding:10px 0}
+.tech-summary li{font-size:0.78em;color:#c9d1d9;line-height:1.7;padding:2px 0;padding-left:14px;position:relative;list-style:none}
+.tech-summary li::before{content:'\2022';position:absolute;left:0;color:#484f58}
+.tech-summary .ts-warn{color:#f85149;font-weight:700}
+.tech-summary .ts-positive{color:#3fb950;font-weight:600}
+.tech-summary .ts-key{color:#d29922;font-weight:600}
+
+@media(max-width:600px){.tech-cards{grid-template-columns:repeat(2,1fr)}}
+
+/* ── 南向资金分析模块 ── */
+.ah-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
+.ah-card{background:rgba(255,255,255,0.02);border:1px solid #1e2d45;border-radius:8px;padding:12px 10px;text-align:center}
+.ah-card .a-lbl{font-size:0.68em;color:#8b949e;margin-bottom:3px}
+.ah-card .a-val{font-size:1.2em;font-weight:700;margin-bottom:2px}
+.ah-card .a-note{font-size:0.65em;color:#6e7681;margin-top:2px}
+.ah-chart{background:rgba(255,255,255,0.01);border:1px solid #1e2d45;border-radius:8px;padding:10px;margin-bottom:14px;overflow-x:auto}
+.ah-table{width:100%;border-collapse:collapse;font-size:0.72em;margin-bottom:12px}
+.ah-table th,.ah-table td{padding:6px 8px;text-align:center;border-bottom:1px solid #1e2d45}
+.ah-table th{color:#8b949e;font-weight:500;font-size:0.85em}
+.ah-table td:first-child{text-align:left;color:#8b949e;white-space:nowrap}
+.ah-deep{padding:10px 0}
+.ah-deep li{font-size:0.78em;color:#c9d1d9;line-height:1.7;padding:3px 0;padding-left:14px;position:relative;list-style:none}
+.ah-deep li::before{content:'•';position:absolute;left:0;color:#484f58}
+.ah-deep .ah-red{color:#f85149;font-weight:700}
+.ah-deep .ah-green{color:#3fb950;font-weight:600}
+.ah-deep .ah-gold{color:#d29922;font-weight:600}
+.ah-deep .ah-blue{color:#58a6ff;font-weight:600}
+
+/* ── PEG估值分析模块 ── */
+.peg-table{width:100%;border-collapse:collapse;font-size:0.8em;margin-bottom:14px}
+.peg-table th,.peg-table td{padding:7px 10px;border-bottom:1px solid #1e2d45}
+.peg-table th{color:#8b949e;font-weight:500;font-size:0.82em;text-align:left}
+.peg-table td:first-child{color:#8b949e;font-weight:500;width:35%}
+.peg-table td:nth-child(2){font-weight:600;width:25%}
+.peg-table td:nth-child(3){font-size:0.82em;color:#c9d1d9;width:40%}
+.peg-conclusion{background:rgba(63,185,80,0.06);border:1px solid rgba(63,185,80,0.2);border-radius:8px;padding:14px;margin-top:12px}
+.peg-conclusion .pc-title{font-size:0.85em;font-weight:700;color:#3fb950;margin-bottom:8px}
+.peg-conclusion .pc-item{font-size:0.78em;color:#c9d1d9;line-height:1.7;padding:2px 0}
+.peg-conclusion .pc-ok{color:#3fb950;font-weight:600}
+.peg-conclusion .pc-no{color:#8b949e}
+.peg-conclusion .pc-warn{color:#f85149;font-weight:600}
+.peg-range{background:rgba(210,153,34,0.06);border:1px solid rgba(210,153,34,0.2);border-radius:8px;padding:12px;margin-top:10px;text-align:center}
+.peg-range .pr-title{font-size:0.78em;color:#d29922;font-weight:600;margin-bottom:6px}
+.peg-range .pr-value{font-size:1.1em;font-weight:700;color:#d29922}
+.peg-range .pr-note{font-size:0.7em;color:#8b949e;margin-top:4px}
+
+@media(max-width:600px){.ah-cards{grid-template-columns:repeat(2,1fr)}}
+
+/* ── 分析师一致预期模块 ── */
+.ac-hero{display:flex;align-items:center;gap:16px;padding:16px;background:rgba(88,166,255,0.05);border:1px solid rgba(88,166,255,0.15);border-radius:10px;margin-bottom:14px;flex-wrap:wrap}
+.ac-hero .ac-badge{font-size:0.85em;font-weight:700;padding:6px 14px;border-radius:6px;white-space:nowrap}
+.ac-hero .ac-badge.buy{background:rgba(63,185,80,0.15);color:#3fb950;border:1px solid rgba(63,185,80,0.3)}
+.ac-hero .ac-badge.hold{background:rgba(210,153,34,0.15);color:#d29922;border:1px solid rgba(210,153,34,0.3)}
+.ac-hero .ac-badge.sell{background:rgba(248,81,73,0.15);color:#f85149;border:1px solid rgba(248,81,73,0.3)}
+.ac-hero .ac-info{font-size:0.8em;color:#c9d1d9;line-height:1.6;flex:1;min-width:200px}
+.ac-hero .ac-info b{color:#58a6ff}
+.ac-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
+.ac-card{background:rgba(255,255,255,0.02);border:1px solid #1e2d45;border-radius:8px;padding:12px 10px;text-align:center}
+.ac-card .ac-lbl{font-size:0.68em;color:#8b949e;margin-bottom:4px}
+.ac-card .ac-val{font-size:1.15em;font-weight:700;margin-bottom:2px}
+.ac-card .ac-sub{font-size:0.68em;color:#6e7681}
+.ac-target-bar{background:rgba(255,255,255,0.02);border:1px solid #1e2d45;border-radius:8px;padding:14px;margin-bottom:14px}
+.ac-target-bar .at-title{font-size:0.78em;color:#8b949e;margin-bottom:8px}
+.at-range{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.at-range .at-label{font-size:0.7em;color:#6e7681;width:40px;text-align:right}
+.at-range .at-bar{flex:1;height:8px;background:rgba(255,255,255,0.05);border-radius:4px;position:relative;overflow:visible}
+.at-range .at-fill{height:100%;background:linear-gradient(90deg,#3fb950,#d29922,#f85149);border-radius:4px}
+.at-range .at-marker{position:absolute;top:-4px;width:2px;height:16px;background:#58a6ff;border-radius:1px}
+.ac-eps-table{width:100%;border-collapse:collapse;font-size:0.78em;margin-top:8px}
+.ac-eps-table th,.ac-eps-table td{padding:6px 10px;border-bottom:1px solid #1e2d45;text-align:center}
+.ac-eps-table th{color:#8b949e;font-weight:500;font-size:0.85em}
+.ac-eps-table td:first-child{text-align:left;color:#8b949e}
+@media(max-width:600px){.ac-cards{grid-template-columns:repeat(2,1fr)}.ac-hero{flex-direction:column;text-align:center}}
+
+/* ── 大资金动向模块 ── */
+.nf-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
+.nf-card{background:rgba(255,255,255,0.02);border:1px solid #1e2d45;border-radius:8px;padding:12px 10px;text-align:center}
+.nf-card .nf-lbl{font-size:0.68em;color:#8b949e;margin-bottom:3px}
+.nf-card .nf-val{font-size:1.2em;font-weight:700;margin-bottom:2px}
+.nf-card .nf-note{font-size:0.65em;color:#6e7681;margin-top:2px}
+.nf-table{width:100%;border-collapse:collapse;font-size:0.78em;margin-bottom:12px}
+.nf-table th,.nf-table td{padding:6px 10px;border-bottom:1px solid #1e2d45;text-align:center}
+.nf-table th{color:#8b949e;font-weight:500}
+.nf-deep{padding:8px 0}
+.nf-deep li{font-size:0.78em;color:#c9d1d9;line-height:1.7;padding:3px 0;padding-left:14px;position:relative;list-style:none}
+.nf-deep li::before{content:'\\2022';position:absolute;left:0;color:#484f58}
+@media(max-width:600px){.nf-cards{grid-template-columns:repeat(2,1fr)}}
+
+/* ── 财务面追踪模块 ── */
+.fin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+.fin-item{background:rgba(255,255,255,0.02);border:1px solid #1e2d45;border-radius:8px;padding:12px 10px;text-align:center}
+.fin-item .f-lbl{font-size:0.68em;color:#8b949e;margin-bottom:3px}
+.fin-item .f-val{font-size:1.15em;font-weight:700;margin-bottom:2px}
+.fin-item .f-chg{font-size:0.68em;margin-top:2px}
+.fin-table{width:100%;border-collapse:collapse;font-size:0.75em;margin-bottom:12px}
+.fin-table th,.fin-table td{padding:5px 8px;border-bottom:1px solid #1e2d45;text-align:center}
+.fin-table th{color:#8b949e;font-weight:500;font-size:0.85em}
+.fin-table td:first-child{text-align:left;color:#8b949e;font-weight:500}
+.fin-metric{font-weight:600}
+@media(max-width:600px){.fin-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* ── 电池装机量模块 ── */
+.bt-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+.bt-card{background:rgba(255,255,255,0.02);border:1px solid #1e2d45;border-radius:8px;padding:12px 10px;text-align:center}
+.bt-card .b-lbl{font-size:0.68em;color:#8b949e;margin-bottom:3px}
+.bt-card .b-val{font-size:1.2em;font-weight:700;margin-bottom:2px}
+.bt-card .b-note{font-size:0.65em;color:#6e7681;margin-top:2px}
+.bt-table{width:100%;border-collapse:collapse;font-size:0.78em;margin-bottom:12px}
+.bt-table th,.bt-table td{padding:6px 10px;border-bottom:1px solid #1e2d45;text-align:center}
+.bt-table th{color:#8b949e;font-weight:500}
+.bt-table td:first-child{text-align:left;color:#8b949e}
+.bt-deep{padding:8px 0}
+.bt-deep li{font-size:0.78em;color:#c9d1d9;line-height:1.7;padding:3px 0;padding-left:14px;position:relative;list-style:none}
+.bt-deep li::before{content:'\\2022';position:absolute;left:0;color:#484f58}
+@media(max-width:600px){.bt-cards{grid-template-columns:repeat(2,1fr)}}</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="nav-bar">
+  <a class="nav-btn active" href="https://zxb20262026.github.io/300750/">🔋 腾讯控股</a>
+  <a class="nav-btn" href="https://zxb20262026.github.io/600900/">💧 长江电力</a>
+  <a class="nav-btn" href="https://zxb20262026.github.io/sh300-etf-dashboard/">🎯 ETF赛道雷达</a>
+</div>
+
+<div class="header">
+  <h1>🔋 腾讯控股 · 生态链日监控</h1>
+  <div class="sub">CATL Ecosystem Radar · 2026-06-07</div>
+  <div class="sub" style="margin-top:2px">A股 <span style="color:#3fb950;font-weight:700">HK$456.6 -0.52%</span></div>
+  <span class="badge badge-evening">晚报 🌙</span>
+</div>
+  <div class="kpi-grid"><div class="kpi-card"><div class="kpi-label">腾讯</div><div class="kpi-value" style="color:#3fb950">HK$456.60</div><div class="kpi-change" style="color:#3fb950">🟢 -0.5%</div><div class="kpi-note">连涨2日 累计+0.5% · 5日涨4.7%</div></div><div class="kpi-card"><div class="kpi-label">H股</div><div class="kpi-value" style="color:#8b949e">—</div><div class="kpi-note"></div></div><div class="kpi-card"><div class="kpi-label">PE(TTM)</div><div class="kpi-value" style="color:#58a6ff">16.6x</div><div class="kpi-note">PE=16.6x 合理</div></div><div class="kpi-card"><div class="kpi-label">PEG</div><div class="kpi-value" style="color:#d29922">1.38</div><div class="kpi-change" style="color:#d29922">合理区间 📊</div><div class="kpi-note">PEG=1.38 合理
+买入线 HK$330 (差27.7%)</div></div><div class="kpi-card"><div class="kpi-label">南向资金</div><div class="kpi-value" style="color:#f85149">—</div><div class="kpi-note">N/A (港股)</div></div><div class="kpi-card"><div class="kpi-label">成交额</div><div class="kpi-value" style="color:#8b949e">0亿</div><div class="kpi-note">成交额0亿 缩量 · 量能230.7x均量</div></div><div class="kpi-card"><div class="kpi-label">主力净流入</div><div class="kpi-value" style="color:#8b949e">—</div><div class="kpi-note">数据暂缺</div></div><div class="kpi-card"><div class="kpi-label">—期货</div><div class="kpi-value" style="color:#8b949e">—</div><div class="kpi-note">N/A (互联网)</div></div><div class="kpi-card"><div class="kpi-label">行业(互联网科技)</div><div class="kpi-value" style="color:#f85149">+0.3%</div><div class="kpi-note">数据源: 恒生科技指数
+与行业同步</div></div><div class="kpi-card"><div class="kpi-label">MA60支撑</div><div class="kpi-value" style="color:#58a6ff">HK$487</div><div class="kpi-note">MA60=HK$487 距6.31%</div></div></div>
+  <div class="core-banner" style="border-color:#d29922">PEG 1.38 · 逆势下跌 分化延续</div>
+  <div class="summary-panel">
+  <div class="sp-title">📋 数据变化总结</div>
+  <div class="summary-item info"><span class="si-icon">📊</span><span class="si-content">PEG=1.38 合理区间 · PE 16.6x 合理</span></div><div class="summary-item important"><span class="si-icon">📈</span><span class="si-content">今日-0.5% <span class="hl-yellow">连涨2日 累计+0.5%</span></span></div><div class="summary-item critical"><span class="si-icon">📈</span><span class="si-content"><span class="hl-yellow">逆势下跌-0.5% (大盘+0.27%)</span> → 资金虹吸（半导体/AI算力）或个股利空</span></div><div class="summary-item info"><span class="si-icon">📐</span><span class="si-content">跌破MA5(HK$459) · MA60=HK$487 (距6.31%)</span></div><div class="summary-item info"><span class="si-icon">🏢</span><span class="si-content">N/A (互联网) → 成本端影响</span></div><div class="summary-item info"><span class="si-icon">🏭</span><span class="si-content">与行业同步 (行业互联网科技 +0.3%)</span></div>
+</div>
+  <div class="trade-plan">
+  <div class="tp-title">🎯 操作建议</div>
+  <p style="color:#d29922;font-weight:600;font-size:0.9em;margin-bottom:10px">PEG合理，持有为主，关注加仓机会</p>
+  <div class="trade-section"><h3>📍 支撑位/压力位</h3><p>MA5=HK$459 (短期压力) · MA20=HK$452 · <span class="hl-yellow">MA60=HK$487 (核心支撑)</span></p><p>心理关口: HK$400</p></div>
+  <div class="trade-section"><h3>🔔 加仓触发条件 (满足任一)</h3><ul>
+<li>条件A: MA60(HK$487)附近企稳(连续2日收盘高于MA60) → 第一批加仓</li>
+<li>条件B: 跌破400后快速收回(长下影线) → 第二批加仓</li>
+<li>条件C: PEG进一步下降至0.6以下 → 一次性加仓</li>
+</ul></div>
+  <div class="trade-section"><h3>📋 加仓计划</h3><ul>
+<li>第一批: HK$482-490 × 30% (MA60支撑区)</li>
+<li>第二批: HK$393-400 × 40% (心理关口+恐慌区)</li>
+<li>第三批: HK$385以下 × 30% (极端情况，需重新评估基本面)</li>
+</ul></div>
+  <div class="trade-section"><h3>🎯 目标价</h3><p>买入价(PEG=1): HK$330 · 目标区间: HK$550-688 (基于PE 20-25x)</p><p>止损: 以PE>30x为参考</p><p>风险收益比: 约 0:1 (潜在涨幅+35.6% vs 潜在跌幅-0%)</p></div>
+</div>
+  <div class="module">
+  <div class="module-hdr"><span class="icon">📅</span><h2>本周走势回顾</h2></div>
+  <table class="val-table">
+    <tr><th>日期</th><th>收盘价</th><th>涨跌幅</th><th>主力净流向</th><th>关键事件</th></tr>
+    <tr><td>06-01</td><td>HK$436.00</td><td style="color:#f85149">+2.1%</td><td style="color:#8b949e">—</td><td style="font-size:0.72em;color:#8b949e">强势上涨</td></tr><tr><td>06-02</td><td>HK$481.60</td><td style="color:#f85149">+10.5%</td><td style="color:#8b949e">—</td><td style="font-size:0.72em;color:#8b949e">强势上涨</td></tr><tr><td>06-03</td><td>HK$466.40</td><td style="color:#3fb950">-3.2%</td><td style="color:#8b949e">—</td><td style="font-size:0.72em;color:#8b949e">放量下跌</td></tr><tr><td>06-04</td><td>HK$459.00</td><td style="color:#3fb950">-1.6%</td><td style="color:#8b949e">—</td><td style="font-size:0.72em;color:#8b949e">放量下跌</td></tr><tr><td>06-05</td><td>HK$453.20</td><td style="color:#3fb950">-1.3%</td><td style="color:#8b949e">—</td><td style="font-size:0.72em;color:#8b949e">盘中触及关键位</td></tr>
+    <tr style="font-weight:700;border-top:2px solid #d29922">
+      <td>本周合计</td>
+      <td>HK$453.20</td>
+      <td style="color:#f85149">+3.9%</td>
+      <td style="color:#3fb950">0.00亿</td>
+      <td style="font-size:0.72em;color:#d29922">大盘涨宁德跌，极端分化</td>
+    </tr>
+  </table>
+  <div style="margin-top:10px;padding:10px;background:rgba(210,153,34,0.06);border-left:3px solid #d29922;border-radius:4px;font-size:0.8em;color:#c9d1d9;line-height:1.6">
+    📝 本周CATL累计上涨3.9%，3天下跌。
+
+每日涨跌: +2.1% → +10.5% → -3.2% → -1.6% → -1.3%
+
+💰 主力资金本周基本平衡（东财数据暂缺，待恢复后更新）。
+
+📐 MA60=¥487，距MA60还有6.3%距离，下方有支撑。
+
+⛏️ N/A (互联网)，成本端稳定。
+  </div>
+</div>
+  <div class="module">
+  <div class="module-hdr"><span class="icon">📊</span><h2>估值判断</h2></div>
+
+  <!-- 子板块1: 估值水位 -->
+  <div class="val-section">
+    <h3>📏 估值水位</h3>
+    <table class="val-table">
+      <tr><th>指标</th><th>当前值</th><th>近5年分位</th><th>判断</th></tr>
+      <tr><td>PE(TTM)</td><td style="color:#3fb950;font-weight:600">16.6</td><td>~20%</td><td style="color:#3fb950">偏低估</td></tr><tr><td>PB</td><td style="color:#3fb950;font-weight:600">—</td><td>~15%</td><td style="color:#3fb950">合理</td></tr><tr><td>PS(TTM)</td><td style="color:#8b949e;font-weight:600">—</td><td>—</td><td style="color:#8b949e">中性</td></tr><tr><td>PEG(40%增速)</td><td style="color:#3fb950;font-weight:600">1.4</td><td>—</td><td style="color:#3fb950">合理</td></tr><tr><td>PEG(25%保守)</td><td style="color:#3fb950;font-weight:600">0.7</td><td>—</td><td style="color:#3fb950">低估</td></tr>
+    </table>
+  </div>
+
+  <!-- 子板块2: PE Bands -->
+  <div class="val-section">
+    <h3>🎯 PE Bands 价格区间</h3>
+    <p style="font-size:0.78em;color:#c9d1d9;margin-bottom:8px">当前HK$457 处于<span class="hl-yellow">合理区</span>，PE=16.6x</p>
+    <div class="band-bar"><div style="position:relative"><span style="position:absolute;left:16.666666666666668%;transform:translateX(-50%);font-size:0.58em;color:#8b949e;top:-16px;z-index:1">HK$0</span><span style="position:absolute;left:33.333333333333336%;transform:translateX(-50%);font-size:0.58em;color:#8b949e;top:-16px;z-index:1">HK$0</span><span style="position:absolute;left:50.0%;transform:translateX(-50%);font-size:0.58em;color:#8b949e;top:-16px;z-index:1">HK$0</span><span style="position:absolute;left:66.66666666666667%;transform:translateX(-50%);font-size:0.58em;color:#8b949e;top:-16px;z-index:1">HK$495</span><span style="position:absolute;left:83.33333333333334%;transform:translateX(-50%);font-size:0.58em;color:#8b949e;top:-16px;z-index:1">HK$688</span><span style="position:absolute;left:100.0%;transform:translateX(-50%);font-size:0.58em;color:#8b949e;top:-16px;z-index:1">HK$963</span></div><div class="band-seg" style="left:0.0%;width:16.666666666666668%;background:#3fb950;opacity:0.3;border-right:1px solid #0a0e17"></div><div class="band-seg" style="left:16.666666666666668%;width:16.666666666666668%;background:#58a6ff;opacity:0.3;border-right:1px solid #0a0e17"></div><div class="band-seg" style="left:33.333333333333336%;width:16.666666666666668%;background:#8b949e;opacity:0.3;border-right:1px solid #0a0e17"></div><div class="band-seg" style="left:50.0%;width:16.666666666666668%;background:#d29922;opacity:0.3;border-right:1px solid #0a0e17"></div><div class="band-seg" style="left:66.66666666666667%;width:16.666666666666668%;background:#f85149;opacity:0.3;border-right:1px solid #0a0e17"></div><div class="band-seg" style="left:83.33333333333334%;width:16.666666666666668%;background:#f85149;opacity:0.3;border-right:1px solid #0a0e17"></div><div class="band-marker" style="left:58.333333333333336%;background:#fff;box-shadow:0 0 6px rgba(255,255,255,0.5)"></div>
+    <div style="position:absolute;left:58.333333333333336%;top:-28px;transform:translateX(-50%);background:#d29922;color:#0a0e17;padding:1px 8px;border-radius:4px;font-size:0.65em;font-weight:700;white-space:nowrap;z-index:3">
+      当前 HK$457
+    </div></div>
+    <div class="band-labels"><span>清仓</span><span>止损</span><span>保守</span><span>合理</span><span>偏高</span><span>泡沫</span></div>
+    <table class="val-table" style="margin-top:8px">
+      <tr><th>情景</th><th>PE</th><th>基准EPS</th><th>目标价</th></tr>
+      <tr><td style="color:#3fb950">清仓区</td><td>x</td><td>27.51</td><td style="color:#3fb950;font-weight:600">HK$0</td></tr><tr><td style="color:#58a6ff">止损区</td><td>x</td><td>27.51</td><td style="color:#58a6ff;font-weight:600">HK$0</td></tr><tr><td style="color:#8b949e">保守区</td><td>x</td><td>27.51</td><td style="color:#8b949e;font-weight:600">HK$0</td></tr><tr><td style="color:#d29922">合理区</td><td>18x</td><td>27.51</td><td style="color:#d29922;font-weight:600">HK$495</td></tr><tr><td style="color:#f85149">偏高区</td><td>25x</td><td>27.51</td><td style="color:#f85149;font-weight:600">HK$688</td></tr><tr><td style="color:#f85149">泡沫区</td><td>35x</td><td>27.51</td><td style="color:#f85149;font-weight:600">HK$963</td></tr>
+    </table>
+  </div>
+
+  <!-- 子板块3: 同行估值对比 -->
+  <div class="val-section">
+    <h3>⚖️ 同行估值对比</h3>
+    <table class="val-table">
+      <tr><th>公司</th><th>PE(TTM)</th><th>ROE</th><th>PEG</th><th>估值性价比</th></tr>
+      
+    </table>
+  </div>
+
+  <!-- 子板块4: 分红与机构定价 -->
+  <div class="val-section">
+    <h3>🏦 分红与机构定价</h3>
+    <div class="inst-cards">
+      <div class="inst-card"><div class="lbl">2025分红率</div><div class="val" style="color:#58a6ff">1.2%</div><div class="note">占净利润</div></div>
+      <div class="inst-card"><div class="lbl">股息率</div><div class="val" style="color:#3fb950">0.38%</div><div class="note">当前价位</div></div>
+      <div class="inst-card"><div class="lbl">机构评级</div><div class="val" style="color:#3fb950">9买入+2增持</div><div class="note">0中性/卖出</div></div>
+      <div class="inst-card"><div class="lbl">机构目标均价</div><div class="val" style="color:#d29922">HK$520</div><div class="note">距当前+13.9%上行空间</div></div>
+    </div>
+  </div>
+</div>
+  <div class="module">
+  <div class="module-hdr"><span class="icon">📈</span><h2>技术面分析</h2></div>
+
+  <!-- 4张指标卡 -->
+  <div class="tech-cards"><div class="tech-card">
+          <div class="t-lbl">收盘价</div>
+          <div class="t-val" style="color:#58a6ff">HK$456.60</div>
+          <div class="t-status" style="color:#8b949e;font-size:0.68em;font-weight:600;margin-top:2px">当日收盘</div>
+          
+        </div><div class="tech-card">
+          <div class="t-lbl">MA5</div>
+          <div class="t-val" style="color:#d29922">HK$459.24</div>
+          <div class="t-status" style="color:#d29922;font-size:0.68em;font-weight:600;margin-top:2px">接近MA5，几乎持平</div>
+          <div class="t-dev" style="color:#d29922">偏离 -0.6%</div>
+        </div><div class="tech-card">
+          <div class="t-lbl">MA20</div>
+          <div class="t-val" style="color:#f85149">HK$451.94</div>
+          <div class="t-status" style="color:#3fb950;font-size:0.68em;font-weight:600;margin-top:2px">站上MA20，获得支撑</div>
+          <div class="t-dev" style="color:#3fb950">偏离 1.0%</div>
+        </div><div class="tech-card">
+          <div class="t-lbl">MA60</div>
+          <div class="t-val" style="color:#3fb950">HK$487.37</div>
+          <div class="t-status" style="color:#f85149;font-size:0.68em;font-weight:600;margin-top:2px">跌破MA60，偏离较大</div>
+          <div class="t-dev" style="color:#f85149">偏离 -6.3%</div>
+        </div></div>
+
+  <!-- 90天趋势图 -->
+  <div class="tech-chart"><svg viewBox="0 0 800 220" style="width:100%;height:auto;max-height:230px;display:block" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="800" height="220" fill="transparent"/>
+  <line x1="24" y1="190.0" x2="776.0" y2="190.0" stroke="#1e2d45" stroke-width="0.5"/>
+<line x1="24" y1="148.5" x2="776.0" y2="148.5" stroke="#1e2d45" stroke-width="0.5"/>
+<line x1="24" y1="107.0" x2="776.0" y2="107.0" stroke="#1e2d45" stroke-width="0.5"/>
+<line x1="24" y1="65.5" x2="776.0" y2="65.5" stroke="#1e2d45" stroke-width="0.5"/>
+<line x1="24" y1="24.0" x2="776.0" y2="24.0" stroke="#1e2d45" stroke-width="0.5"/>
+
+  <text x="18" y="193.0" text-anchor="end" font-size="9" fill="#484f58">HK$412</text><text x="18" y="151.5" text-anchor="end" font-size="9" fill="#484f58">HK$469</text><text x="18" y="110.0" text-anchor="end" font-size="9" fill="#484f58">HK$526</text><text x="18" y="68.5" text-anchor="end" font-size="9" fill="#484f58">HK$584</text><text x="18" y="27.0" text-anchor="end" font-size="9" fill="#484f58">HK$641</text>
+  <text x="24.0" y="216" text-anchor="middle" font-size="8" fill="#484f58">01-21</text><text x="150.7" y="216" text-anchor="middle" font-size="8" fill="#484f58">02-11</text><text x="277.5" y="216" text-anchor="middle" font-size="8" fill="#484f58">03-09</text><text x="404.2" y="216" text-anchor="middle" font-size="8" fill="#484f58">03-30</text><text x="531.0" y="216" text-anchor="middle" font-size="8" fill="#484f58">04-23</text><text x="657.7" y="216" text-anchor="middle" font-size="8" fill="#484f58">05-15</text>
+  <polyline points="24.0,51.7 32.4,55.4 40.9,57.2 49.3,53.9 57.8,48.5 66.2,38.3 74.7,37.6 83.1,49.2 91.6,54.6 100.0,67.4 108.5,84.1 116.9,83.7 125.4,91.7 133.8,82.6 142.3,89.2 150.7,91.3 159.2,100.4 167.6,103.0 176.1,102.2 184.5,110.2 193.0,98.6 201.4,111.7 209.9,109.9 218.3,117.5 226.8,113.1 235.2,116.1 243.7,118.6 252.1,121.9 260.6,124.8 269.0,112.4 277.5,114.6 285.9,87.3 294.4,88.4 302.8,92.4 311.3,91.7 319.7,83.7 328.2,89.9 336.6,89.5 345.1,116.8 353.5,120.4 362.0,127.4 370.4,116.1 378.9,122.2 387.3,129.4 395.8,131.0 404.2,139.6 412.7,137.9 421.1,128.7 429.6,134.1 438.0,120.4 446.5,120.0 454.9,123.0 463.4,133.5 471.8,131.2 480.3,127.0 488.7,113.9 497.2,118.6 505.6,109.9 514.1,112.4 522.5,123.3 531.0,129.7 539.4,131.0 547.9,141.8 556.3,145.3 564.8,141.3 573.2,149.6 581.7,145.8 590.1,146.4 598.6,153.1 607.0,142.7 615.5,147.0 623.9,152.1 632.4,157.3 640.8,153.4 649.3,155.2 657.7,157.9 666.2,163.1 674.6,155.3 683.1,158.8 691.5,170.6 700.0,168.8 708.4,170.6 716.9,173.9 725.3,180.7 733.8,179.1 742.2,172.7 750.7,139.6 759.1,150.6 767.6,156.0 776.0,160.2" fill="none" stroke="#58a6ff" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+<polyline points="57.8,53.3 66.2,50.6 74.7,47.1 83.1,45.5 91.6,45.6 100.0,49.4 108.5,58.6 116.9,67.8 125.4,76.3 133.8,81.9 142.3,86.3 150.7,87.7 159.2,91.1 167.6,93.3 176.1,97.2 184.5,101.4 193.0,102.9 201.4,105.2 209.9,106.5 218.3,109.6 226.8,110.2 235.2,113.7 243.7,115.0 252.1,117.4 260.6,118.9 269.0,118.7 277.5,118.5 285.9,112.2 294.4,105.5 302.8,99.0 311.3,94.9 319.7,88.7 328.2,89.2 336.6,89.5 345.1,94.3 353.5,100.1 362.0,108.8 370.4,114.0 378.9,120.6 387.3,123.1 395.8,125.2 404.2,127.7 412.7,132.0 421.1,133.3 429.6,134.2 438.0,132.1 446.5,128.2 454.9,125.2 463.4,126.2 471.8,125.6 480.3,126.9 488.7,125.7 497.2,124.8 505.6,120.1 514.1,116.3 522.5,115.6 531.0,118.8 539.4,121.3 547.9,127.7 556.3,134.2 564.8,137.8 573.2,141.8 581.7,144.8 590.1,145.7 598.6,147.3 607.0,147.5 615.5,147.0 623.9,148.3 632.4,150.4 640.8,150.5 649.3,153.0 657.7,155.2 666.2,157.4 674.6,157.0 683.1,158.1 691.5,161.1 700.0,163.3 708.4,164.8 716.9,168.5 725.3,172.9 733.8,174.6 742.2,175.4 750.7,169.2 759.1,164.6 767.6,159.6 776.0,155.8" fill="none" stroke="#d29922" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+<polyline points="184.5,72.6 193.0,75.0 201.4,77.8 209.9,80.4 218.3,83.6 226.8,86.8 235.2,90.7 243.7,94.8 252.1,98.4 260.6,101.9 269.0,104.1 277.5,105.7 285.9,105.9 294.4,105.7 302.8,106.2 311.3,106.3 319.7,105.9 328.2,105.4 336.6,104.7 345.1,105.5 353.5,106.0 362.0,107.4 370.4,107.6 378.9,108.2 387.3,108.8 395.8,109.7 404.2,110.9 412.7,111.9 421.1,112.2 429.6,112.7 438.0,113.1 446.5,113.3 454.9,115.1 463.4,117.4 471.8,119.3 480.3,121.1 488.7,122.6 497.2,124.0 505.6,125.0 514.1,124.8 522.5,125.0 531.0,125.1 539.4,125.8 547.9,126.8 556.3,127.6 564.8,128.1 573.2,128.6 581.7,129.0 590.1,129.9 598.6,130.9 607.0,132.0 615.5,133.3 623.9,134.8 632.4,136.0 640.8,137.1 649.3,138.5 657.7,140.7 666.2,142.9 674.6,145.2 683.1,147.5 691.5,149.9 700.0,151.8 708.4,153.8 716.9,155.4 725.3,157.2 733.8,159.1 742.2,160.2 750.7,159.9 759.1,160.1 767.6,160.3 776.0,161.2" fill="none" stroke="#f85149" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+<polyline points="522.5,101.2 531.0,102.5 539.4,103.7 547.9,105.2 556.3,106.7 564.8,108.2 573.2,110.1 581.7,111.9 590.1,113.5 598.6,115.1 607.0,116.4 615.5,117.4 623.9,118.6 632.4,119.7 640.8,120.9 649.3,122.0 657.7,123.1 666.2,124.1 674.6,125.0 683.1,125.9 691.5,126.9 700.0,128.1 708.4,129.1 716.9,130.2 725.3,131.2 733.8,132.3 742.2,133.3 750.7,133.6 759.1,134.1 767.6,134.6 776.0,135.4" fill="none" stroke="#3fb950" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+
+  <line x1="32" y1="10" x2="48" y2="10" stroke="#58a6ff" stroke-width="2"/><text x="52" y="14" font-size="9" fill="#8b949e">收盘价</text><line x1="114" y1="10" x2="130" y2="10" stroke="#d29922" stroke-width="2"/><text x="134" y="14" font-size="9" fill="#8b949e">MA5</text><line x1="196" y1="10" x2="212" y2="10" stroke="#f85149" stroke-width="2"/><text x="216" y="14" font-size="9" fill="#8b949e">MA20</text><line x1="278" y1="10" x2="294" y2="10" stroke="#3fb950" stroke-width="2"/><text x="298" y="14" font-size="9" fill="#8b949e">MA60</text>
+</svg></div>
+
+  <!-- 技术面研判 -->
+  <div class="tech-summary">
+    <ul><li><span class="ts-key">📌 今日走势</span>：腾讯控股<span class="ts-key">-0.52%</span></li><li>今日跟随大盘走弱。短期看属于正常调整，不必过度解读。</li><li><span class="ts-key">📈 连涨态势</span>：已连续<span class="ts-positive">2日上涨</span>，累计涨幅<span class="ts-positive">+0.5%</span>。短期动能充足，但连续上涨后追高需谨慎。</li><li><span class="ts-key">📊 均线诊断</span>：</li><li>  <span class="ts-warn">⚠️ 股价已跌破MA60(487)</span>，偏离<span class="ts-warn">6.3%</span>。MA60被视为<b>中长期趋势的生命线</b>，有效跌破意味着多数持仓者处于浮亏状态，技术面转为弱势。建议密切关注未来2-3个交易日是否能快速收复MA60。</li><li><span class="ts-key">🎯 关键价位</span>：<span style="color:#f85149">上方压力</span> MA5=459、MA60=487、心理关口470；<span style="color:#3fb950">下方支撑</span> MA20=452、心理关口450</li><li><span class="ts-key">💼 操作参考</span>：股价已失守MA60，<span class="ts-warn">趋势偏弱</span>。建议长线投资者暂时观望，等待股价重新站上MA60后再考虑加仓。短线如有反弹至MA60附近，可考虑减仓降低风险。</li><li><span class="ts-key">📝 一句话</span>：技术面偏弱，需谨慎对待。但公司基本面良好，技术面的弱势往往是长线布局的机会窗口——关键是要<b>分批、耐心、不止损在恐慌中</b>。</li></ul>
+  </div>
+</div>
+  <div class="module">
+  <div class="module-hdr"><span class="icon">🐧</span><h2>港股市场定位</h2></div>
+  <div style="padding:20px;text-align:center;color:#6e7681;line-height:1.8">
+    <p style="font-size:1.1em;color:#58a6ff">腾讯控股 (00700.HK) 仅在港交所上市</p>
+    <p>无A/H股溢价问题，估值直接对标港股科技板块</p>
+    <p style="margin-top:8px;font-size:0.85em">参考恒生科技指数 · 恒生指数</p>
+  </div>
+</div>
+  <div class="module">
+  <div class="module-hdr"><span class="icon">🧮</span><h2>PEG估值分析</h2></div>
+
+  <table class="peg-table">
+      <tr><th>指标</th><th>数值</th><th>评估</th></tr>
+      <tr><td>当前股价</td><td style="color:#58a6ff">HK$456.60</td><td></td></tr><tr><td>PE(TTM)</td><td style="color:#e6edf3">16.6x</td><td><span style="color:#3fb950">历史偏低</span></td></tr><tr><td>预测EPS(2026E)</td><td style="color:#e6edf3">HK$30.81</td><td>基于12%增长假设</td></tr><tr><td>远期PE(2026E)</td><td style="color:#e6edf3">14.82x</td><td>HK$457 / HK$30.81</td></tr><tr><td>PEG</td><td style="color:#e6edf3">1.38</td><td><span style="color:#d29922">1~1.5 → 合理区间</span></td></tr><tr><td>PB</td><td style="color:#e6edf3">—</td><td>—</td></tr><tr><td>机构目标均价</td><td style="color:#e6edf3">HK$520</td><td>11家覆盖，上行+13.9%</td></tr>
+    </table>
+
+  <div class="peg-conclusion">
+    <div class="pc-title">🧮 PEG估值结论：PEG = <span style="color:#d29922">1.38</span>，处于<span style="color:#d29922">合理区间</span></div>
+    <div class="pc-item">• 买入条件（PEG&lt;1）：<span class="pc-no">—</span></div>
+    <div class="pc-item">• 卖出条件（PEG&gt;1.5）：<span class="pc-no">❌ 未触发 → 继续持有</span></div>
+    <div class="pc-item">• 当前价位：HK$456.60，今日-0.5%，估值安全边际充足</div>
+  </div>
+
+  <div class="peg-range"><div class="pr-title">合理估值区间（基于2026E EPS HK$30.81 × PE 25-30x）</div><div class="pr-value">HK$770 — HK$924</div><div class="pr-note">较当前价有 <span style="color:#3fb950;font-weight:600">+68.6% ~ +102.4%</span> 上行空间</div></div>
+</div>
+  <div class="module">
+  <div class="module-hdr"><span class="icon">🔮</span><h2>分析师一致预期</h2></div>
+  <div class="ac-hero">
+      <span class="ac-badge buy">买入</span>
+      <div class="ac-info">
+        近1月 <b>4</b> 家机构评级 ·
+        买入 <b>4</b> ·
+        增持 <b>0</b> ·
+        中性 <b>0</b><br>
+        看多比例 <b>100%</b> · 无减持/卖出评级
+      </div>
+    </div>
+  <div class="ac-cards"><div class="ac-card">
+      <div class="ac-lbl">1月内</div>
+      <div class="ac-val" style="color:#3fb950">买入</div>
+      <div class="ac-sub">买4·增0/4家</div>
+    </div><div class="ac-card">
+      <div class="ac-lbl">2月内</div>
+      <div class="ac-val" style="color:#3fb950">买入</div>
+      <div class="ac-sub">买18·增3/21家</div>
+    </div><div class="ac-card">
+      <div class="ac-lbl">3月内</div>
+      <div class="ac-val" style="color:#3fb950">买入</div>
+      <div class="ac-sub">买26·增6/32家</div>
+    </div></div>
+  <div class="ac-target-bar">
+      <div class="at-title">🎯 一致预期目标区间 · 合理估值 <b style="color:#58a6ff">HK$415~622</b> · 上行空间 <b style="color:#3fb950">+13.4%</b></div>
+      <div class="at-range">
+        <span class="at-label">HK$415</span>
+        <div class="at-bar"><div class="at-fill" style="width:100%"></div><div class="at-marker" style="left:20%"></div></div>
+        <span class="at-label">HK$622</span>
+      </div>
+      <div style="text-align:center;font-size:0.7em;color:#58a6ff;margin-top:4px">▲ 现价 HK$457 · 隐含PE 19.7x</div>
+    </div>
+  <table class="ac-eps-table"><tr><th>年度</th><th>类型</th><th>一致预期EPS</th><th>对应PE</th><th>ROE</th></tr><tr><td>2025</td><td style="color:#8b949e">实际</td><td class="fin-metric">HK$15.61</td><td>25.8x</td><td>24.9%</td></tr><tr><td>2026</td><td style="color:#58a6ff">预测</td><td class="fin-metric">HK$20.74</td><td>19.7x</td><td>23.8%</td></tr><tr><td>2027</td><td style="color:#58a6ff">预测</td><td class="fin-metric">HK$25.63</td><td>15.9x</td><td>24.8%</td></tr><tr><td>2028</td><td style="color:#58a6ff">预测</td><td class="fin-metric">HK$30.83</td><td>13.2x</td><td>24.9%</td></tr></table>
+</div>
+  <div class="module">
+  <div class="module-hdr"><span class="icon">🦈</span><h2>大资金动向</h2></div>
+  <div class="nf-cards"><div class="nf-card"><div class="nf-lbl">大宗交易</div><div class="nf-val" style="color:#8b949e">暂无</div><div class="nf-note">近30日无大宗交易记录</div></div><div class="nf-card">
+        <div class="nf-lbl">主力资金（5日）</div>
+        <div class="nf-val" style="color:#8b949e">—亿</div>
+        <div class="nf-note">超大单+大单净额</div>
+      </div></div>
+  
+  <ul class="nf-deep"><li>📌 近期无大宗交易，关注主力资金流向判断机构态度</li></ul>
+</div>
+  <div class="module">
+  <div class="module-hdr"><span class="icon">📊</span><h2>财务面追踪</h2></div>
+  <div class="fin-grid">
+      <div class="fin-item">
+        <div class="f-lbl">PE(TTM)</div>
+        <div class="f-val">23.61x</div>
+        <div class="f-chg" style="color:#3fb950">低估</div>
+      </div>
+      <div class="fin-item">
+        <div class="f-lbl">ROE</div>
+        <div class="f-val">22.11%</div>
+        <div class="f-chg" style="color:#3fb950">优秀</div>
+      </div>
+      <div class="fin-item">
+        <div class="f-lbl">市净率</div>
+        <div class="f-val">5.71x</div>
+        <div class="f-chg" style="color:#8b949e">总市值18645.31亿</div>
+      </div>
+      <div class="fin-item">
+        <div class="f-lbl">毛利率(QoQ)</div>
+        <div class="f-val">28.0%</div>
+        <div class="f-chg" style="color:#8b949e">↓ 略降</div>
+      </div>
+    </div>
+  <table class="fin-table"><tr><th>报告期</th><th>营收(亿)</th><th>净利润(亿)</th><th>EPS</th><th>ROE</th><th>毛利率</th></tr><tr><td>2024Q1</td><td class="fin-metric">797</td><td class="fin-metric">105</td><td>HK$2.39</td><td>24.0%</td><td>26.4%</td></tr><tr><td>2024Q2</td><td class="fin-metric">870</td><td class="fin-metric">123</td><td>HK$2.8</td><td>25.4%</td><td>27.1%</td></tr><tr><td>2024Q3</td><td class="fin-metric">923</td><td class="fin-metric">131</td><td>HK$2.98</td><td>25.8%</td><td>27.8%</td></tr><tr><td>2024Q4</td><td class="fin-metric">1050</td><td class="fin-metric">148</td><td>HK$3.36</td><td>26.5%</td><td>28.2%</td></tr><tr><td>2025Q1</td><td class="fin-metric">980</td><td class="fin-metric">139</td><td>HK$3.16</td><td>25.0%</td><td>28.0%</td></tr></table>
+  <ul class="nf-deep"><li>📈 最新季度营收 980亿 · 环比 <span style="color:#f85149">-6.7%</span></li>
+<li>💰 净利润 139亿 · 环比 <span style="color:#f85149">-6.1%</span></li>
+<li>📊 营收同比 <span style="color:#3fb950">+23.0%</span> · 净利同比 <span style="color:#3fb950">+32.4%</span></li>
+<li>🔋 腾讯控股毛利率稳步提升至28%+，受益于—成本下降+规模效应，盈利能力持续改善</li></ul>
+</div>
+  <div class="module"><div class="module-hdr"><span class="icon">🔋</span><h2>电池装机量</h2></div><p style="color:#8b949e;font-size:0.8em">月度装机数据待更新（每月11日发布）</p></div>
+  <div class="module">
+  <div class="module-hdr"><span class="icon">🏢</span><h2>上游原材料雷达</h2><span class="status" style="background:rgba(88,166,255,0.1);color:#58a6ff">平均 -0.3%</span></div>
+  <div class="mat-grid"></div>
+  <table style="margin-top:12px">
+    <tr><th>上游龙头</th><th>价格</th><th>今日</th><th>5日</th><th>15日</th><th>30日</th><th>走势小结</th></tr>
+    <tr><td>阅文集团</td><td style="color:#3fb950;font-weight:600">HK$22.86</td><td style="color:#3fb950">-1.6%</td><td style="color:#3fb950">-7.4%</td><td style="color:#3fb950">-10.0%</td><td style="color:#3fb950">-12.6%</td><td style="font-size:0.72em;color:#8b949e">深度回调，加速下跌</td></tr><tr><td>微盟集团</td><td style="color:#f85149;font-weight:600">HK$1.40</td><td style="color:#f85149">0.0%</td><td style="color:#f85149">+2.9%</td><td style="color:#3fb950">-3.5%</td><td style="color:#3fb950">-6.0%</td><td style="font-size:0.72em;color:#8b949e">持续走弱，短期反转</td></tr><tr><td>金山软件</td><td style="color:#f85149;font-weight:600">HK$21.88</td><td style="color:#f85149">+0.6%</td><td style="color:#3fb950">-6.1%</td><td style="color:#3fb950">-5.9%</td><td style="color:#3fb950">-9.9%</td><td style="font-size:0.72em;color:#8b949e">持续走弱，加速下跌</td></tr><tr><td>众安在线</td><td style="color:#3fb950;font-weight:600">HK$10.35</td><td style="color:#3fb950">-0.3%</td><td style="color:#3fb950">-4.2%</td><td style="color:#3fb950">-7.8%</td><td style="color:#3fb950">-16.3%</td><td style="font-size:0.72em;color:#8b949e">深度回调</td></tr>
+  </table>
+</div>
+  <div class="module">
+  <div class="module-hdr"><span class="icon">📊</span><h2>板块指数联动</h2></div>
+  <table><tr><th>板块</th><th>点位</th><th>涨跌幅</th></tr><tr><td>恒生科技</td><td style="color:#f85149">4975.36</td><td style="color:#f85149">+0.3%</td></tr><tr><td>中概互联</td><td style="color:#f85149">8501.91</td><td style="color:#f85149">+0.1%</td></tr><tr><td>港股通科技</td><td style="color:#f85149">4975.36</td><td style="color:#f85149">+0.3%</td></tr></table>
+</div>
+  
+  <div class="module">
+  <div class="module-hdr"><span class="icon">📰</span><h2>本周重大资讯 (5/19-5/25)</h2></div>
+  <div style="margin-bottom:10px"><span style="font-size:0.78em;font-weight:600;color:#d29922">📊 机构观点</span>
+            <div style="padding:8px 10px;margin-bottom:6px;background:rgba(255,255,255,0.02);border-left:3px solid #d29922;border-radius:4px">
+              <div style="font-size:0.82em;font-weight:600;margin-bottom:3px">
+                <a href="http://finance.eastmoney.com/a/202606043760379231.html" target="_blank" style="color:#e6edf3;text-decoration:none">腾讯客服确认微信重磅新功能 大摩重申“增持”评级</a>
+              </div>
+              <div style="font-size:0.7em;color:#6e7681;line-height:1.4">腾讯现价相当于2026年预测市盈率13.9倍，估值具吸引力，重申“增持”评级，目标价650港元不变。 　　该行认为，微信AI智能体是一个关键的催化剂，若报道属实，推出时间可能会早于该行先前预期的第四季。</div>
+              <div style="font-size:0.65em;color:#484f58;margin-top:3px">2026-06-04 · 21世纪经济报道</div>
+            </div>
+            <div style="padding:8px 10px;margin-bottom:6px;background:rgba(255,255,255,0.02);border-left:3px solid #d29922;border-radius:4px">
+              <div style="font-size:0.82em;font-weight:600;margin-bottom:3px">
+                <a href="http://finance.eastmoney.com/a/202606033758928182.html" target="_blank" style="color:#e6edf3;text-decoration:none">花旗维持腾讯“买入”评级 关注微信AI智能体推出时间</a>
+              </div>
+              <div style="font-size:0.7em;color:#6e7681;line-height:1.4">该行维持公司“买入”评级，续予目标价763港元。</div>
+              <div style="font-size:0.65em;color:#484f58;margin-top:3px">2026-06-03 · 财联社</div>
+            </div>
+            <div style="padding:8px 10px;margin-bottom:6px;background:rgba(255,255,255,0.02);border-left:3px solid #d29922;border-radius:4px">
+              <div style="font-size:0.82em;font-weight:600;margin-bottom:3px">
+                <a href="http://finance.eastmoney.com/a/202605193742016537.html" target="_blank" style="color:#e6edf3;text-decoration:none">高盛：对腾讯控股AI策略进展感到鼓舞 重申“买入”评级</a>
+              </div>
+              <div style="font-size:0.7em;color:#6e7681;line-height:1.4">腾讯重建了大型语言模型团队，重新设计了预训练和强化学习堆栈，扩展和清理了数据集，并将评估从公共基准转向通用智能。Hy3被视为其规模类别中较好的模型之一，为未来六至九个月内推出更大、更智能的模型迭代奠定基础。该行维持对腾讯的“买入”评级，12</div>
+              <div style="font-size:0.65em;color:#484f58;margin-top:3px">2026-05-19 · 财联社</div>
+            </div></div>
+  <div style="margin-top:14px;padding-top:12px;border-top:1px solid #1e2d45">
+    <div style="font-size:0.82em;font-weight:600;color:#d29922;margin-bottom:10px">📋 本周资讯对腾讯控股的影响评估</div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px"><div style="background:rgba(255,255,255,0.02);border:1px solid #1e2d45;border-radius:8px;padding:12px 14px">
+          <div style="font-size:0.75em;font-weight:700;color:#f85149;margin-bottom:6px">📈 股价反应</div>
+          <div style="font-size:0.7em;color:#8b949e;line-height:1.65">本周涨2日，累计+0.5%，短线多头占优。从资讯面看，本周腾讯控股公司层面暂无重大公告，市场短期更多受资金面和板块轮动影响。大盘方面，新能源板块整体表现强于上证指数，板块内部轮动加速，龙头股弹性逐步恢复。</div>
+        </div><div style="background:rgba(255,255,255,0.02);border:1px solid #1e2d45;border-radius:8px;padding:12px 14px">
+          <div style="font-size:0.75em;font-weight:700;color:#d29922;margin-bottom:6px">💰 估值影响</div>
+          <div style="font-size:0.7em;color:#8b949e;line-height:1.65">当前PE(TTM)=23.6x，PEG=1.38，处于合理区间。本周多家机构发布研报，多数维持「买入」评级，目标价在HK$450-500区间，较当前价有15%-25%上行空间。伴随PE持续压缩，市场给予腾讯控股的成长性溢价几乎消失，估值已趋于合理，向上弹性需靠业绩催化。关注下周即将披露的月度排产数据，若超预期将直接催化估值修复。</div>
+        </div><div style="background:rgba(255,255,255,0.02);border:1px solid #1e2d45;border-radius:8px;padding:12px 14px">
+          <div style="font-size:0.75em;font-weight:700;color:#3fb950;margin-bottom:6px">🏢 成本端</div>
+          <div style="font-size:0.7em;color:#8b949e;line-height:1.65">上游核心原材料—最新报价约10万元/吨，N/A (互联网)。从半年维度看，—价格走势平稳，这对腾讯控股的电池成本构成直接利好——原材料成本约占电池总成本60%，锂价每下降10%对应毛利率提升约2个百分点。其他关键材料方面，正极材料和电解液价格同步走弱，整体成本环境较去年同期显著改善。中长期来看，腾讯控股向上游锂矿、镍矿持续布局，原材料自供率提升将进一步熨平成本波动。</div>
+        </div><div style="background:rgba(255,255,255,0.02);border:1px solid #1e2d45;border-radius:8px;padding:12px 14px">
+          <div style="font-size:0.75em;font-weight:700;color:#58a6ff;margin-bottom:6px">🏭 行业竞争</div>
+          <div style="font-size:0.7em;color:#8b949e;line-height:1.65">从本周资讯看，新能源车渗透率持续攀升，终端需求景气度未减。腾讯控股全球动力电池装机市占率维持在37%左右，连续多年稳居第一，与第二名差距仍在拉大。固态电池等下一代技术仍在研发阶段，短期内不会撼动宁德在液态锂电池领域的统治地位。比亚迪、亿纬锂能等二线厂商加速扩产，但宁德在技术迭代、客户绑定和规模效应上仍具显著护城河。海外方面，腾讯控股匈牙利工厂、印尼项目稳步推进，全球化产能布局领先同行至少2-3年。</div>
+        </div><div style="background:rgba(255,255,255,0.02);border:1px solid #1e2d45;border-radius:8px;padding:12px 14px">
+          <div style="font-size:0.75em;font-weight:700;color:#58a6ff;margin-bottom:6px">📜 政策环境</div>
+          <div style="font-size:0.7em;color:#8b949e;line-height:1.65">本周暂无重大政策变动，国内储能市场已进入装机爆发期，2025年新增装机预计同比增长超40%，腾讯控股作为储能电池全球出货量第一的企业，是政策红利最直接的受益方。海外政策方面，欧盟新电池法案的碳足迹要求逐步落地，宁德凭借零碳工厂和全生命周期碳管理能力，相比国内二线厂商有明显合规优势。美国IRA法案细则仍在博弈中，但宁德通过技术授权模式（如与福特的合作）已找到破局路径。总体来看，政策环境对宁德以利好为主，储能赛道是中长期的第二增长曲线。</div>
+        </div><div style="background:rgba(255,255,255,0.02);border:1px solid #1e2d45;border-radius:8px;padding:12px 14px">
+          <div style="font-size:0.75em;font-weight:700;color:#d29922;margin-bottom:6px">🎯 操作提示</div>
+          <div style="font-size:0.7em;color:#8b949e;line-height:1.65">综合本周资讯和数据，腾讯控股基本面未出现任何恶化信号——估值合理、成本端持续改善、行业地位稳固、政策面利好不断。当前股价的弱势更多是市场风格切换和短期资金博弈的结果，非基本面驱动。对于长线持有者：PEG&lt;1叠加MA60强支撑，是分批加仓的较好时机，建议在HK$390-HK$400区间金字塔式建仓，止损位设在MA60下方3%（约HK$385）。对于短线交易者：趋势未扭转前保持观望，等待放量阳线确认企稳信号再入场。下周重点关注：月度排产数据、大宗交易机构动向、以及—价格是否继续下探。</div>
+        </div></div>
+  </div>
+</div>
+  <div class="footer">
+  🤖 Hermes · CATL Ecosystem Monitor v1.2<br>
+  2026-06-07 23:43:26 · 数据: 新浪/腾讯/东方财富/生意社<br>
+  📊 <a href="https://zxb20262026.github.io/00700/" target="_blank">完整报告</a> ·
+  <a href="https://github.com/zxb20262026/00700" target="_blank">GitHub</a><br>
+  ⚠️ 仅供参考 不构成投资建议
+</div>
+</div>
+</body>
+</html>
