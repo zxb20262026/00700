@@ -1,7 +1,7 @@
 {
-  "date": "2026-06-15",
-  "datetime": "2026-06-15 23:48:41",
-  "mode": "晚报 🌙",
+  "date": "2026-06-16",
+  "datetime": "2026-06-16 08:01:10",
+  "mode": "早报 ☀️",
   "tencent": {
     "name": "腾讯控股",
     "price": 459.6,
@@ -7193,9 +7193,9 @@
       {
         "window": "2月内",
         "rating": "买入",
-        "rating_num": 4.857142857143,
-        "org_num": 21,
-        "buy_num": 18,
+        "rating_num": 4.823529411765,
+        "org_num": 17,
+        "buy_num": 14,
         "add_num": 3,
         "neutral_num": null,
         "reduce_num": null,
@@ -8206,5 +8206,5 @@
     "trend_desc": "偏强震荡，买盘积极",
     "fund_desc": "主力资金基本平衡"
   },
-  "pushed_at": "2026-06-15 23:48:52"
+  "pushed_at": "2026-06-16 08:01:19"
 }
