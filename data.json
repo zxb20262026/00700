@@ -1,7 +1,7 @@
 {
-  "date": "2026-07-28",
-  "datetime": "2026-07-28 18:00:47",
-  "mode": "晚报 🌙",
+  "date": "2026-07-29",
+  "datetime": "2026-07-29 00:30:34",
+  "mode": "早报 ☀️",
   "tencent": {
     "name": "腾讯控股",
     "price": 447.4,
@@ -27,7 +27,17 @@
     "div_yield": 0.61,
     "eps_ttm": 20.59
   },
-  "tencent_fund": null,
+  "tencent_fund": {
+    "main_net": 2,
+    "huge_net": 0,
+    "big_net": 0,
+    "small_net": 54.8003691485,
+    "main_pct": 0,
+    "today_in": 0,
+    "three_day": 0,
+    "five_day": 0,
+    "ten_day": 0
+  },
   "tencent_kline": [
     {
       "date": "2026-03-16",
@@ -6989,6 +6999,13 @@
         "content": "白云机场在接受调研时表示，前期与广告经营商之间的法律纠纷已审结，现白云机场的广告业务经营关系已经理顺，广告经营状况平稳有序。"
       },
       {
+        "title": "不造机器人，腾讯押注具身智能“大脑”",
+        "date": "2026-07-28",
+        "source": "21世纪经济报道",
+        "url": "http://finance.eastmoney.com/a/202607283823747316.html",
+        "content": "做机器人大脑 　　需求变化也在推动腾讯重新定义其在具身智能产业的位置。 　　长期以来，腾讯明确表示不会涉足机器人量产。腾讯首席科学家、Robotics X实验室主任张正友指出，中国机器人硬件供应链已具备较强制造能力，机器人本体企业数量多、迭"
+      },
+      {
         "title": "腾讯宣布“QQ宠物”正式回归",
         "date": "2026-07-27",
         "source": "界面新闻",
@@ -7008,13 +7025,6 @@
         "source": "科创板日报",
         "url": "http://finance.eastmoney.com/a/202607273821903670.html",
         "content": "据腾讯云消息，腾讯WorkBuddy正式上架鸿蒙电脑应用市场，成为鸿蒙平台首个桌面办公智能体。"
-      },
-      {
-        "title": "腾讯WorkBuddy正式上架鸿蒙电脑应用市场",
-        "date": "2026-07-27",
-        "source": "界面新闻",
-        "url": "http://finance.eastmoney.com/a/202607273821890463.html",
-        "content": "7月27日，据腾讯云消息，腾讯WorkBuddy正式上架鸿蒙电脑应用市场，成为鸿蒙平台首个桌面办公智能体。"
       }
     ],
     "金融科技": [
@@ -7100,6 +7110,13 @@
         "content": "二是大力推广“互联网+AI监管”，鼓励积极对接监管部门信息化平台，提升监管质效。 　　三是严格原料管理，确保肉类原料可控可溯，坚决抵制采购、使用来源不明、未经检验检疫或检验检疫不合格、过期、走私的肉类原料。"
       },
       {
+        "title": "市场监管总局：加快完善与超大规模市场健康发展相适应的市场综合监管体系",
+        "date": "2026-07-28",
+        "source": "上海证券报·中国证券网",
+        "url": "http://finance.eastmoney.com/a/202607283823650255.html",
+        "content": "上证报中国证券网讯据市场监管总局7月28日消息，7月26日至7月27日上午，市场监管基层基础能力建设专题研讨会在京召开。"
+      },
+      {
         "title": "QDII-ETF市场日报 | 恒生互联网与中概互联网领涨，标普油气重挫逾6%",
         "date": "2026-07-27",
         "source": "界面新闻",
@@ -7112,13 +7129,6 @@
         "source": "券商中国",
         "url": "http://finance.eastmoney.com/a/202607273822394433.html",
         "content": "另一方面，要坚持问题导向，坚定不移推进严监管强监管，坚守监管姓监定位，做到专注监管、严格监管。 　　此外，会议还强调要强化监管引领，督促金融机构加快改革转型、实现错位发展，多措并举营造良好行业生态，有效提升经济金融适配性，以行业高质量发展促"
-      },
-      {
-        "title": "港股互联网概念股走强，港股通互联网ETF涨约3%",
-        "date": "2026-07-27",
-        "source": "每日经济新闻",
-        "url": "http://stock.eastmoney.com/a/202607273821981064.html",
-        "content": "港股互联网概念股走强，小米集团-W涨超6%，美团-W涨超4%，金山软件涨超3%。 　　受盘面影响，港股通互联网ETF涨约3%。"
       },
       {
         "title": "港股互联网板块强势反弹，港股互联网ETF国泰（513720）涨超3%",
@@ -7176,15 +7186,40 @@
       "dividend_yield": 0.38
     }
   },
-  "week_flow": [],
+  "week_flow": [
+    {
+      "date": "2026-07-21",
+      "main_net": 9.84
+    },
+    {
+      "date": "2026-07-22",
+      "main_net": -3.68
+    },
+    {
+      "date": "2026-07-23",
+      "main_net": 7.04
+    },
+    {
+      "date": "2026-07-24",
+      "main_net": 1.09
+    },
+    {
+      "date": "2026-07-27",
+      "main_net": 7.08
+    },
+    {
+      "date": "2026-07-28",
+      "main_net": -0.49
+    }
+  ],
   "analyst_consensus": {
     "periods": [
       {
         "window": "1月内",
         "rating": "买入",
-        "rating_num": 4.833333333333,
-        "org_num": 18,
-        "buy_num": 15,
+        "rating_num": 4.842105263158,
+        "org_num": 19,
+        "buy_num": 16,
         "add_num": 3,
         "neutral_num": null,
         "reduce_num": null,
@@ -7193,9 +7228,9 @@
       {
         "window": "2月内",
         "rating": "买入",
-        "rating_num": 4.833333333333,
-        "org_num": 18,
-        "buy_num": 15,
+        "rating_num": 4.842105263158,
+        "org_num": 19,
+        "buy_num": 16,
         "add_num": 3,
         "neutral_num": null,
         "reduce_num": null,
@@ -7204,9 +7239,9 @@
       {
         "window": "3月内",
         "rating": "买入",
-        "rating_num": 4.85,
-        "org_num": 20,
-        "buy_num": 17,
+        "rating_num": 4.857142857143,
+        "org_num": 21,
+        "buy_num": 18,
         "add_num": 3,
         "neutral_num": null,
         "reduce_num": null,
@@ -7238,9 +7273,9 @@
     "latest": {
       "window": "1月内",
       "rating": "买入",
-      "rating_num": 4.833333333333,
-      "org_num": 18,
-      "buy_num": 15,
+      "rating_num": 4.842105263158,
+      "org_num": 19,
+      "buy_num": 16,
       "add_num": 3,
       "neutral_num": null,
       "reduce_num": null,
@@ -8134,9 +8169,9 @@
       "text": "PE=16.3x 合理"
     },
     "fund": {
-      "text": "数据暂缺",
-      "main_net": 0,
-      "five_day": 0
+      "text": "资金平稳",
+      "main_net": 0.0002,
+      "five_day": 0.0
     },
     "lithium": {
       "text": "N/A (互联网)"
@@ -8165,46 +8200,46 @@
         "date": "2026-07-22",
         "close": 440.6,
         "change_pct": -7.05,
-        "fund_net": null,
+        "fund_net": -3.68,
         "events": "放量下跌"
       },
       {
         "date": "2026-07-23",
         "close": 445.2,
         "change_pct": 1.04,
-        "fund_net": null,
-        "events": "—"
+        "fund_net": 7.04,
+        "events": "主力净流入7.0亿"
       },
       {
         "date": "2026-07-24",
         "close": 434.6,
         "change_pct": -2.38,
-        "fund_net": null,
+        "fund_net": 1.09,
         "events": "放量下跌"
       },
       {
         "date": "2026-07-27",
         "close": 443.0,
         "change_pct": 1.93,
-        "fund_net": null,
-        "events": "强势上涨"
+        "fund_net": 7.08,
+        "events": "强势上涨，主力净流入7.1亿"
       },
       {
         "date": "2026-07-28",
         "close": 447.2,
         "change_pct": 0.95,
-        "fund_net": null,
+        "fund_net": -0.49,
         "events": "—"
       }
     ],
     "total": {
       "close": 447.2,
       "week_chg": 1.5,
-      "week_fund": 0
+      "week_fund": 11.04
     },
-    "summary": "本周CATL累计上涨1.5%，2天下跌。\n\n每日涨跌: -7.0% → +1.0% → -2.4% → +1.9% → +0.9%\n\n📉 好消息是跌幅在收窄（前半周均值-3.0% → 后半周+0.2%），抛压可能接近尾声。\n\n💰 主力资金本周基本平衡（东财数据暂缺，待恢复后更新）。\n\n📐 MA60=¥452，当前价距MA60仅1.0%，已逼近核心支撑位——这是技术面的关键防线。\n\n📉 连续涨4日，累计0.5%。短线过热，注意回调风险。\n\n⛏️ N/A (互联网)，成本端稳定。",
+    "summary": "本周CATL累计上涨1.5%，2天下跌。\n\n每日涨跌: -7.0% → +1.0% → -2.4% → +1.9% → +0.9%\n\n📉 好消息是跌幅在收窄（前半周均值-3.0% → 后半周+0.2%），抛压可能接近尾声。\n\n💰 主力资金净流入11.0亿元，机构在吸筹。\n\n📐 MA60=¥452，当前价距MA60仅1.0%，已逼近核心支撑位——这是技术面的关键防线。\n\n📉 连续涨4日，累计0.5%。短线过热，注意回调风险。\n\n⛏️ N/A (互联网)，成本端稳定。",
     "trend_desc": "偏强震荡，买盘积极",
-    "fund_desc": "主力资金基本平衡"
+    "fund_desc": "主力资金偏多，全周净流入11.0亿"
   },
-  "pushed_at": "2026-07-28 18:00:56"
+  "pushed_at": "2026-07-29 00:30:46"
 }
