@@ -1,30 +1,30 @@
 {
   "date": "2026-08-04",
-  "datetime": "2026-08-04 08:01:53",
+  "datetime": "2026-08-04 11:41:33",
   "mode": "早报 ☀️",
   "tencent": {
     "name": "腾讯控股",
-    "price": 490.4,
-    "prev_close": 475.2,
-    "open": 482.0,
-    "high": 491.0,
-    "low": 480.6,
-    "volume": 18865174458,
-    "amount": 38649910.0,
-    "change": 15.2,
-    "change_pct": 3.199
+    "price": 489.6,
+    "prev_close": 490.4,
+    "open": 491.0,
+    "high": 494.8,
+    "low": 483.6,
+    "volume": 5251347380,
+    "amount": 10766267.0,
+    "change": -0.8,
+    "change_pct": -0.163
   },
   "tencent_pe": {
-    "pe_ttm": 17.91
+    "pe_ttm": 17.8
   },
   "tencent_full": {
-    "pe_ttm": 17.91,
-    "pb": 2.19,
-    "market_cap": 44589.6999,
+    "pe_ttm": 17.8,
+    "pb": 2.28,
+    "market_cap": 44316.9244,
     "roe": 11.53,
     "high_52w": 677.7,
     "low_52w": 411.0,
-    "div_yield": 1.46,
+    "div_yield": 0.96,
     "eps_ttm": 20.59
   },
   "tencent_fund": null,
@@ -748,6 +748,14 @@
       "high": 491.0,
       "low": 480.6,
       "volume": 38649910.0
+    },
+    {
+      "date": "2026-08-04",
+      "open": 491.0,
+      "close": 487.4,
+      "high": 494.8,
+      "low": 483.6,
+      "volume": 11914349.0
     }
   ],
   "tencent_kline_long": [
@@ -6750,122 +6758,130 @@
       "high": 491.0,
       "low": 480.6,
       "volume": 38649910.0
+    },
+    {
+      "date": "2026-08-04",
+      "open": 491.0,
+      "close": 487.4,
+      "high": 494.8,
+      "low": 483.6,
+      "volume": 11914349.0
     }
   ],
   "market": {
     "恒生指数": {
-      "price": 25884.43,
-      "change_pct": -0.4
+      "price": 26009.4,
+      "change_pct": -0.31
     },
     "恒生科技": {
-      "price": 4829.22,
-      "change_pct": -0.67
+      "price": 4875.61,
+      "change_pct": -0.3
     }
   },
   "business_proxies": {
     "阅文集团": {
       "code": "hk00772",
-      "price": 20.22,
-      "change_pct": -0.98,
+      "price": 20.2,
+      "change_pct": -0.49,
       "periods": {
-        "5日": 7.27,
-        "15日": 4.07,
-        "30日": 2.22
+        "5日": 3.38,
+        "15日": 2.8,
+        "30日": 2.96
       },
-      "trend_summary": "横盘震荡，加速上涨"
+      "trend_summary": "横盘震荡"
     },
     "微盟集团": {
       "code": "hk02013",
-      "price": 1.2,
-      "change_pct": -1.64,
+      "price": 1.23,
+      "change_pct": 0.0,
       "periods": {
-        "5日": 6.19,
-        "15日": 3.45,
-        "30日": -6.98
+        "5日": 6.03,
+        "15日": 4.24,
+        "30日": -1.6
       },
-      "trend_summary": "持续走弱，加速上涨"
+      "trend_summary": "横盘震荡，加速上涨"
     },
     "金山软件": {
       "code": "hk03888",
-      "price": 26.76,
-      "change_pct": -1.04,
+      "price": 28.14,
+      "change_pct": -0.57,
       "periods": {
-        "5日": 7.3,
-        "15日": 11.78,
-        "30日": 16.96
+        "5日": 9.66,
+        "15日": 18.24,
+        "30日": 29.32
       },
       "trend_summary": "强势上涨，加速上涨"
     },
     "众安在线": {
       "code": "hk06060",
-      "price": 11.09,
-      "change_pct": 0.82,
+      "price": 11.18,
+      "change_pct": -0.71,
       "periods": {
-        "5日": 4.33,
-        "15日": 11.23,
-        "30日": 9.05
+        "5日": 0.63,
+        "15日": 9.82,
+        "30日": 12.93
       },
-      "trend_summary": "稳步上行"
+      "trend_summary": "强势上涨"
     }
   },
   "competitors": {
     "阿里巴巴": {
       "code": "hk09988",
-      "price": 117.0,
-      "change_pct": -3.31,
+      "price": 125.2,
+      "change_pct": -1.26,
       "periods": {
-        "5日": 4.46,
-        "15日": 5.6,
-        "30日": 13.7
+        "5日": 10.21,
+        "15日": 10.41,
+        "30日": 26.53
       },
-      "trend_summary": "强势上涨"
+      "trend_summary": "强势上涨，加速上涨"
     },
     "美团": {
       "code": "hk03690",
-      "price": 92.5,
-      "change_pct": -0.54,
+      "price": 93.45,
+      "change_pct": 0.54,
       "periods": {
-        "5日": 2.44,
-        "15日": 16.79,
-        "30日": 28.47
+        "5日": 1.25,
+        "15日": 12.05,
+        "30日": 34.27
       },
       "trend_summary": "强势上涨"
     },
     "快手": {
       "code": "hk01024",
-      "price": 43.7,
-      "change_pct": -1.09,
+      "price": 45.02,
+      "change_pct": -0.27,
       "periods": {
-        "5日": 3.21,
-        "15日": -0.23,
-        "30日": -4.0
+        "5日": 5.19,
+        "15日": 0.72,
+        "30日": 4.16
       },
-      "trend_summary": "横盘震荡，短期反转"
+      "trend_summary": "横盘震荡，加速上涨"
     },
     "网易": {
       "code": "hk09999",
-      "price": 207.8,
-      "change_pct": 0.0,
+      "price": 208.0,
+      "change_pct": 0.87,
       "periods": {
-        "5日": 4.11,
-        "15日": 2.97,
-        "30日": 9.25
+        "5日": 2.36,
+        "15日": 2.67,
+        "30日": 11.89
       },
-      "trend_summary": "稳步上行"
+      "trend_summary": "强势上涨"
     }
   },
   "sectors": {
     "恒生科技": {
-      "price": 4829.22,
-      "change_pct": -0.67
+      "price": 4875.61,
+      "change_pct": -0.3
     },
     "中概互联": {
-      "price": 8612.15,
-      "change_pct": -0.54
+      "price": 8652.15,
+      "change_pct": -0.18
     },
     "港股通科技": {
-      "price": 4829.22,
-      "change_pct": -0.67
+      "price": 4875.61,
+      "change_pct": -0.3
     }
   },
   "news": {
@@ -6982,6 +6998,13 @@
     ],
     "广告": [
       {
+        "title": "150亿深圳广告高手，入主20亿通信设备商",
+        "date": "2026-08-04",
+        "source": "21世纪经济报道",
+        "url": "http://finance.eastmoney.com/a/202608043830514797.html",
+        "content": "招股书显示，东信营销的九成收入来自数智营销解决方案业务，公司本质上扮演“广告代理商”的角色。 　　刘杨帮客户在抖音、腾讯等平台投放广告，赚取媒体返点和服务费。2024年，来自前五大客户的收入占比达到57.9%。"
+      },
+      {
         "title": "广告技术公司Teads在纽约法院起诉Google和Alphabet",
         "date": "2026-08-04",
         "source": "界面新闻",
@@ -7008,13 +7031,6 @@
         "source": "央视财经",
         "url": "http://finance.eastmoney.com/a/202608033829660043.html",
         "content": "科技与互联网板块表现活跃： 　　阿里巴巴-W（09988.HK）涨幅达6.75%，报124.90港元领涨； 　　百度集团-SW（09888.HK）上涨3.87%； 　　腾讯控股（00700.HK）上涨2.99%； 　　美团-W（03690."
-      },
-      {
-        "title": "澳大利亚新闻付费法案拟调整：税率提高至2.5%，基数改为“数字广告收入”",
-        "date": "2026-08-03",
-        "source": "澎湃新闻",
-        "url": "http://finance.eastmoney.com/a/202608033830089447.html",
-        "content": "为了打破科技巨头对新闻流量及广告收入的垄断，澳大利亚政府于2021年首次公布《新闻媒体和数字平台强制性谈判法案》。只要平台主动与本地媒体达成一定的商业付费协议，就不会被政府列入需要接受“最终报价仲裁”的“指定平台”名单。"
       }
     ],
     "金融科技": [
@@ -7047,11 +7063,11 @@
         "content": "今天（8月2日），由中国地震台网中心、中央广播电视总台国家应急广播与腾讯联合推出的微信地震预警服务上线两大新功能：“震感汇聚”与“位置更新”。"
       },
       {
-        "title": "规范互联网渠道售卡类服务 微信公众平台：请自8月11前完成整改",
-        "date": "2026-08-03",
-        "source": "新京报",
-        "url": "http://finance.eastmoney.com/a/202608033830098749.html",
-        "content": "新京报贝壳财经讯（记者韦英姿）8月3日，微信公众平台运营中心发布公告称，号卡办理相关业务仅由电信运营商开展。自本公告发布之日起，平台不再支持非电信运营商主体从事号卡办理、售卡引流、代办开卡等相关经营行为。"
+        "title": "科技早报 | iPhone最高或涨价1350元；微信公众平台规范互联网渠道售卡类服务内容",
+        "date": "2026-08-04",
+        "source": "界面新闻",
+        "url": "http://finance.eastmoney.com/a/202608043830403112.html",
+        "content": "微信公众平台规范互联网渠道售卡类服务内容 　　8月3日，微信公众平台运营中心发布关于规范互联网渠道售卡类服务内容的公告。"
       }
     ],
     "AI大模型": [
@@ -7135,36 +7151,36 @@
     "pe_bands": {
       "极度低估": {
         "pe": 8,
-        "price": 219.0,
+        "price": 220.0,
         "color": "#3fb950"
       },
       "低估区": {
         "pe": 12,
-        "price": 329.0,
+        "price": 330.0,
         "color": "#58a6ff"
       },
       "合理区": {
         "pe": 18,
-        "price": 493.0,
+        "price": 495.0,
         "color": "#d29922"
       },
       "偏高区": {
         "pe": 25,
-        "price": 685.0,
+        "price": 688.0,
         "color": "#f85149"
       },
       "高估区": {
         "pe": 30,
-        "price": 821.0,
+        "price": 825.0,
         "color": "#f85149"
       },
       "泡沫区": {
         "pe": 35,
-        "price": 958.0,
+        "price": 963.0,
         "color": "#ff0000"
       },
       "_current": "合理区",
-      "_eps": 27.38
+      "_eps": 27.51
     },
     "institution": {
       "buy": 9,
@@ -7303,11 +7319,11 @@
     }
   ],
   "financials": {
-    "pe_ttm": 21.47,
-    "pb": 4.81,
+    "pe_ttm": 21.6,
+    "pb": 4.84,
     "roe": 22.41,
-    "mcap": 18247.53,
-    "price": 394.4,
+    "mcap": 18363.19,
+    "price": 396.9,
     "quarters": [
       {
         "period": "2024Q1",
@@ -7359,51 +7375,51 @@
   },
   "peers_valuation": {
     "腾讯控股": {
-      "price": 490.4,
-      "change_pct": 3.199,
-      "pe": 17.91,
-      "pb": 2.19,
-      "market_cap": 44589.6999,
+      "price": 489.6,
+      "change_pct": -0.163,
+      "pe": 17.8,
+      "pb": 2.28,
+      "market_cap": 44298.7394,
       "roe": 11.53
     },
     "阿里巴巴": {
-      "price": 125.2,
-      "change_pct": 7.009,
-      "pe": 20.46,
-      "pb": 5.04,
-      "market_cap": 24009.0034,
+      "price": 127.8,
+      "change_pct": 2.077,
+      "pe": 20.76,
+      "pb": 3.43,
+      "market_cap": 24354.1807,
       "roe": 5.35
     },
     "美团": {
-      "price": 93.45,
-      "change_pct": 1.027,
-      "pe": -22.32,
-      "pb": 2.76,
-      "market_cap": 5770.3188,
+      "price": 93.0,
+      "change_pct": -0.482,
+      "pe": -22.12,
+      "pb": 3.26,
+      "market_cap": 5720.9207,
       "roe": -10.71
     },
     "网易": {
-      "price": 208.0,
-      "change_pct": 0.096,
-      "pe": 17.76,
-      "pb": 2.12,
-      "market_cap": 6636.5323,
+      "price": 206.4,
+      "change_pct": -0.769,
+      "pe": 17.57,
+      "pb": 2.02,
+      "market_cap": 6566.3382,
       "roe": 15.03
     },
     "快手": {
-      "price": 45.02,
-      "change_pct": 3.021,
-      "pe": 9.45,
-      "pb": 4.44,
-      "market_cap": 1947.8714,
+      "price": 44.64,
+      "change_pct": -0.844,
+      "pe": 9.33,
+      "pb": 4.18,
+      "market_cap": 1923.642,
       "roe": 9.16
     },
     "小米集团": {
-      "price": 27.96,
-      "change_pct": -2.849,
-      "pe": 15.67,
-      "pb": 5.42,
-      "market_cap": 7225.4518,
+      "price": 27.78,
+      "change_pct": -0.644,
+      "pe": 15.51,
+      "pb": 4.15,
+      "market_cap": 7153.0939,
       "roe": 7.03
     }
   },
@@ -8032,6 +8048,11 @@
       "date": "2026-07-27",
       "close": 443.0,
       "pe": 21.52
+    },
+    {
+      "date": "2026-08-04",
+      "close": 487.4,
+      "pe": 23.67
     }
   ],
   "ah_premium": null,
@@ -8039,99 +8060,99 @@
   "ah_mean30": null,
   "ah_7day": [],
   "ah_ranking": null,
-  "peg": 1.49,
+  "peg": 1.48,
   "peg_signal": {
     "text": "合理区间 📊",
     "color": "#d29922",
     "level": "hold"
   },
-  "proxy_avg_change": -0.71,
-  "competitor_avg_change": -1.24,
+  "proxy_avg_change": -0.44,
+  "competitor_avg_change": -0.03,
   "summaries": {
     "mas": {
-      "MA5": 470.2,
-      "MA20": 463.47,
-      "MA60": 452.29
+      "MA5": 478.24,
+      "MA20": 464.78,
+      "MA60": 452.46
     },
     "ma60_dist": {
-      "value": 452.29,
-      "dist_pct": 8.43,
-      "text": "距MA60 +8.43%",
+      "value": 452.46,
+      "dist_pct": 8.21,
+      "text": "距MA60 +8.21%",
       "near": false
     },
     "streak": {
-      "days": 1,
-      "pct": 0.0,
+      "days": 2,
+      "pct": -0.16,
       "direction": "涨",
-      "text": "连涨1日 累计+0.0%"
+      "text": "连涨2日 累计+0.2%"
     },
-    "chg_5d": 9.66,
-    "chg_10d": 3.46,
-    "chg_20d": 6.33,
+    "chg_5d": 4.97,
+    "chg_10d": 11.12,
+    "chg_20d": 2.26,
     "volume_ratio": {
-      "ratio": 605.08,
-      "text": "量能605.1x均量"
+      "ratio": 175.44,
+      "text": "量能175.4x均量"
     },
     "vs_market": {
-      "text": "逆势上涨3.2% (大盘-0.40%)",
-      "type": "diverge_up",
-      "diff": 3.6
+      "text": "跑赢大盘 (-0.2% vs -0.31%)",
+      "type": "outperform",
+      "diff": 0.15
     },
     "ah": {
       "level": "unknown",
       "text": "N/A (港股)"
     },
     "peg": {
-      "value": 1.49,
-      "target_price": 328.58,
-      "distance_pct": -33.0,
+      "value": 1.48,
+      "target_price": 330.07,
+      "distance_pct": -32.58,
       "signal": "hold",
-      "text": "PEG=1.49 合理"
+      "text": "PEG=1.48 合理"
     },
     "target_prices": {
-      "buy": 329.0,
-      "low": 548.0,
-      "mid": 616.0,
-      "high": 685.0
+      "buy": 330.0,
+      "low": 550.0,
+      "mid": 619.0,
+      "high": 688.0
     },
     "pe_bands": {
       "极度低估": {
         "pe": 8,
-        "price": 219.0,
+        "price": 220.0,
         "color": "#3fb950"
       },
       "低估区": {
         "pe": 12,
-        "price": 329.0,
+        "price": 330.0,
         "color": "#58a6ff"
       },
       "合理区": {
         "pe": 18,
-        "price": 493.0,
+        "price": 495.0,
         "color": "#d29922"
       },
       "偏高区": {
         "pe": 25,
-        "price": 685.0,
+        "price": 688.0,
         "color": "#f85149"
       },
       "高估区": {
         "pe": 30,
-        "price": 821.0,
+        "price": 825.0,
         "color": "#f85149"
       },
       "泡沫区": {
         "pe": 35,
-        "price": 958.0,
+        "price": 963.0,
         "color": "#ff0000"
       },
       "_current": "合理区",
-      "_eps": 27.38
+      "_eps": 27.51
     },
     "pe": {
-      "value": 17.91,
+      "value": 17.8,
       "level": "合理",
-      "text": "PE=17.9x 合理"
+      "text": "PE=17.8x 合理"
     },
     "fund": {
       "text": "数据暂缺",
@@ -8143,31 +8164,24 @@
     },
     "proxy_alerts": [],
     "amount": {
-      "value": 0.3864991,
+      "value": 0.10766267,
       "level": "缩量",
       "text": "成交额0亿 缩量"
     },
     "industry": {
       "name": "互联网科技",
       "source": "恒生科技",
-      "change_pct": -0.67,
-      "text": "互联网科技(恒生科技) -0.7%"
+      "change_pct": -0.3,
+      "text": "互联网科技(恒生科技) -0.3%"
     },
     "cost": {
       "text": "— (公开版)"
     },
-    "core_summary": "PEG 1.49",
-    "vs_industry": "强于行业3.9%"
+    "core_summary": "PEG 1.48",
+    "vs_industry": "与行业同步"
   },
   "week_review": {
     "days": [
-      {
-        "date": "2026-07-28",
-        "close": 447.2,
-        "change_pct": 0.95,
-        "fund_net": null,
-        "events": "—"
-      },
       {
         "date": "2026-07-29",
         "close": 466.4,
@@ -8194,17 +8208,24 @@
         "close": 490.4,
         "change_pct": 3.2,
         "fund_net": null,
-        "events": "强势上涨，盘中触及关键位"
+        "events": "强势上涨"
+      },
+      {
+        "date": "2026-08-04",
+        "close": 487.4,
+        "change_pct": -0.61,
+        "fund_net": null,
+        "events": "—"
       }
     ],
     "total": {
-      "close": 490.4,
-      "week_chg": 9.66,
+      "close": 487.4,
+      "week_chg": 4.5,
       "week_fund": 0
     },
-    "summary": "本周CATL累计上涨9.7%，0天下跌。\n\n每日涨跌: +0.9% → +4.3% → +1.2% → +0.7% → +3.2%\n\n💰 主力资金本周基本平衡（东财数据暂缺，待恢复后更新）。\n\n📐 MA60=¥452，距MA60还有8.4%距离，下方有支撑。\n\n⛏️ N/A (互联网)，成本端稳定。",
+    "summary": "本周CATL累计上涨4.5%，1天下跌。\n\n每日涨跌: +4.3% → +1.2% → +0.7% → +3.2% → -0.6%\n\n💰 主力资金本周基本平衡（东财数据暂缺，待恢复后更新）。\n\n📐 MA60=¥452，距MA60还有8.2%距离，下方有支撑。\n\n⛏️ N/A (互联网)，成本端稳定。",
     "trend_desc": "持续走强，多头掌控",
     "fund_desc": "主力资金基本平衡"
   },
-  "pushed_at": "2026-08-04 08:02:02"
+  "pushed_at": "2026-08-04 11:41:48"
 }
